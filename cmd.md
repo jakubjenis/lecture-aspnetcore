@@ -13,10 +13,15 @@ mkdir razor
 cd razor
 dotnet new razor
 
+cd..
+
+mkdir mvc
+cd mvc
+dotnet new mvc
+
 cd ..
 
 dotnet sln add razor/razor.csproj
 dotnet sln add emptyWeb/emptyWeb.csproj
 
 ```
-

@@ -119,3 +119,47 @@ dotnet --info
 * LINQ
 
 ## ASP.NET Core MVC
+
+* Program.cs
+  * UseStartup
+
+* Startup.cs
+  * injected IConfiguration, IHostingEnvironment, IApplicationBuilder from  IApplicationBuilder.ApplicationServices
+  * ConfigureServices
+    * Adding services to the service container makes them available within the app
+    * **Add** convention
+  * Configure
+    * Specify how the app responds to HTTP requests by adding middleware components to IApplicationBuilder
+    * **Use** convention
+
+* Dependency injection
+  * TODO
+
+* Middleware _(out of scope)_
+  * Routing
+  * Compression
+  * Response caching
+  * Authentication
+  * URL rewriting
+  * Session
+  * Web sockets
+
+* Static files _(out of scope_
+  * TODO Investigate
+
+* Routing basics
+  * TODO
+
+* Environments
+  * default - Development, Staging, Production
+  * env.IsDevelopment(), env.IsStaging(), env.IsProduction(), env.IsEnvironment("envName")
+  * ASPNETCORE_ENVIRONMENT
+  * Appsettings.Development.json, Appsettings.Production.json
+
+* Error handling
+* Logging
+
+* Data access
+  * localdb - (localdb)\\mssqllocaldb, C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\.
+  * ```dotnet ef database update```
+
