@@ -118,7 +118,7 @@ dotnet --info
 * lambdas
 * LINQ
 
-## ASP.NET Core MVC
+## ASP.NET Core fundamentals
 
 * Program.cs
   * UseStartup
@@ -132,8 +132,7 @@ dotnet --info
     * Specify how the app responds to HTTP requests by adding middleware components to IApplicationBuilder
     * **Use** convention
 
-* Dependency injection
-  * TODO
+* Dependency injection <https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection>
 
 * Middleware _(out of scope)_
   * Routing
@@ -144,11 +143,9 @@ dotnet --info
   * Session
   * Web sockets
 
-* Static files _(out of scope_
-  * TODO Investigate
+* Static files _(out of scope)_
 
 * Routing basics
-  * TODO
 
 * Environments
   * default - Development, Staging, Production
@@ -157,9 +154,58 @@ dotnet --info
   * Appsettings.Development.json, Appsettings.Production.json
 
 * Error handling
+  * <https://docs.microsoft.com/en-us/aspnet/core/fundamentals/error-handling>
+  * Filters
+
+* Hosting
+
 * Logging
+
+## ASP.NET Core MVC
+
+* Controllers <https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/actions>
+  * Routing
+  * DI
+  * IActionResult
+* Models
+  * Model binding <https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding>
+  * Validation <https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation>
+  * ModelState.IsValid
+* Views
+  * Razor
+  * Layout
+  * TagHelpers
+
+Razor pages
 
 * Data access
   * localdb - (localdb)\\mssqllocaldb, C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\.
-  * ```dotnet ef database update```
 
+* EF CORE CLI Tooling
+ ```
+ dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet restore
+
+<ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet"
+                            Version="2.0.0" />
+  </ItemGroup>
+
+ dotnet ef database update
+ dotnet ef migrations add
+ dotnet ef migrations list
+ dotnet ef migrations script
+ ```
+<https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet>
+
+* EF CORE PMC CLI Tooling <https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/powershell>
+
+  * Add-Migration
+  * Drop-Database
+  * Get-DbContext
+  * Remove-Migration
+  * Scaffold-DbContext
+  * Script-Migration
+  * Update-Database
+
+* Authentication <https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie?tabs=aspnetcore2x>

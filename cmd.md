@@ -13,6 +13,8 @@ mkdir razor
 cd razor
 dotnet new razor
 
+-- dotnet new razor -au Individualcd ..
+
 cd..
 
 mkdir mvc
