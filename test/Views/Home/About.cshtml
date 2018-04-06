@@ -1,0 +1,100 @@
+﻿@model List<string>
+@{
+    int a = 10;
+
+}
+<h2>About</h2>
+<h3>This is my about page</h3>
+
+@DateTime.Now.Second
+
+<p>Use this area to provide additional information.</p>
+
+
+<p>Value of my variable is @a</p>
+<p>Value of my variable + 20 is @(a + 20)</p>
+
+@if (a > 0)
+{
+    @:a je kladne
+    <text>a je kladne</text>
+    <p>a je kladne</p>
+}
+else
+{
+    <p>A je zaporne</p>
+}
+
+@foreach (var order in Model)
+{
+    <h3>Objednavka @order</h3>
+    <p>Sample text</p>
+}
+
+<div class="jumbotron">
+    <h1>My first jumbotron</h1>
+    <p>Jumbotron content</p>
+    <p><a class="btn-greytext btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    @*<p><a class="btn btn-primary btn-lg" style="background-color: azure;" href="#" role="button">Learn more</a></p>*@
+
+</div>
+
+<table style="border:1px solid black;">
+    <tr>
+        <td>value1</td>
+        <td>value2</td>
+        <td>value3</td>
+    </tr>
+</table>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div id="someTab">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div role="tabpanel" class="tab-pane" id="settings">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    <script>
+        //setTimeout(function() {
+        //    window.location.reload(1);
+        //}, 5000);
+
+        //setRefresh(5000);
+
+        $('#someTab').tab('show');
+        
+    </script>    
+}
