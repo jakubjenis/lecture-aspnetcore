@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout";
+}
+@using LectureDemo.Data
+@model LectureDemo.Data.Student
+
+<h1>Create student</h1>
+<form asp-controller="Home" asp-action="Create" method="post">
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" />
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" />
+    <br/><br/>
+    <input class="btn btn-primary" type="submit" value="Create" />
+    <a class="btn btn-default" asp-controller="Home" asp-action="Index">Back</a>
+</form>

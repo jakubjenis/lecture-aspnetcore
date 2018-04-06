@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model List<LectureDemo.Data.Student>
+
+@if (Model == null || Model.Count == 0)
+{
+    <p>No data</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <th>Meno</th>
+        <th>Priezvisko</th>
+        <th></th>
+        </thead>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td><a class="btn btn-primary" asp-controller="Home" asp-action="Detail" asp-route-id="@student.Id">Edit</a></td>
+            </tr>
+        }
+    </table>
+}
+
+<a class="btn btn-primary" asp-controller="Home" asp-action="Create">Create</a>
